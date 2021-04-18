@@ -38,9 +38,10 @@ paths:
                   $ref: "#/definitions/Book"
       security:
       - api-key: []
+  /favorites:
     post:
-      summary: "Post a new book"
-      operationId: "addBook"
+      summary: "Add a book to favorites"
+      operationId: "addBookToFavorites"
       consumes:
       - "application/json"
       produces:
@@ -57,10 +58,10 @@ paths:
           description: "successful operation"
       security:
       - api-key: []
-  /lists/best-sellers/history.json/{bookId}:
+  /favorites/{bookId}:
     put:
-      summary: "Update a best seller book title"
-      operationId: "updateBook"
+      summary: "Update a favorite book's title"
+      operationId: "updateFavoriteBook"
       consumes:
       - "application/json"
       produces:
@@ -86,8 +87,8 @@ paths:
       security:
       - api-key: []
     delete:
-      summary: "Delete a best seller book"
-      operationId: "deleteBook"
+      summary: "Delete a favorite book"
+      operationId: "deleteFavoriteBook"
       consumes:
       - "application/json"
       produces:
