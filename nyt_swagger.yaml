@@ -55,7 +55,7 @@ paths:
           $ref: "#/definitions/Book"
       responses:
         "200":
-          description: "successful operation"
+          description: "Successful operation"
       security:
       - api-key: []
   /favorites/{bookId}:
@@ -79,7 +79,7 @@ paths:
         format: "int64"
       responses:
         "200":
-          description: "successful operation"
+          description: "Successful operation"
         "400":
           description: "Invalid ID supplied"
         "404":
@@ -102,21 +102,18 @@ paths:
         format: "int64"
       responses:
         "200":
-          description: "successful operation"
+          description: "Successful operation"
         "400":
           description: "Invalid ID supplied"
         "404":
           description: "Book not found"
       security:
       - api-key: []
-
-
 securityDefinitions:
   api-key:
     name: "api-key"
     type: "apiKey"
     in: "query"
-
 definitions:
   Book:
    type: "object"
